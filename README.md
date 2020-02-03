@@ -4,7 +4,7 @@
 
 ##  Step 2:copy camera.py into your desktop
 
-## Step 3: create startup-pointer
+## Step 3: create autostart pointer
 open your terminal and insert following command :
 ```
 $ cd /etc/xdg/autostart
