@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=runCamera
+Type=Application
+Exec=sh /usr/bin/runCamera.sh
+Terminal=false
