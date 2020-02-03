@@ -1,4 +1,5 @@
-# RaspberiAsCamera
+# Raspberri Pi 3B+   As   Camera
+
 ##  Step 1: install OpenCV  (Link for tutorail required)
 
 ##  Step 2:copy camera.py into your desktop
@@ -32,3 +33,5 @@ python3 camera.py &
 press Ctrl+X and save the file
 now you can restart your raspberry and your code will automatically executed as Desktop is booted
 
+
+configuration steps are described in this [youtube video] (https://www.youtube.com/watch?v=yDJgohRfTb0)
