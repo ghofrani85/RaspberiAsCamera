@@ -1,0 +1,58 @@
+import cv2
+import time
+import datetime
+import threading
+import time
+import datetime
+
+
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BCM)
+
+GPIO.setup(17,GPIO.IN)
+
+cam=cv2.VideoCapture(0)
+ret_val,img=cam.read()
+lastFrame=img
+def thread_function():
+    global cam
+    global lastFrame
+    print("camera inited")
+    while(True):
+        ret_val, img=cam.read()
+        lastFrame=img    
+
+    
+x = threading.Thread(target=thread_function)
+x.start()
+
+
+#initialise a previous input variable to 0 (assume button not pressed last)
+prev_input = 0
+print("Input ininted")
+
+
+
+
+
+prev_input = 1
+while True:
+  #take a reading
+  input = GPIO.input(17)
+  
+  cv2.imshow("camera",lastFrame)
+  cv2.waitKey(1)
+  #if the last reading was low and this one high, print
+  if ((not prev_input) and input):
+    print("Button pressed")
+    time.sleep(0.05)   
+  
+    now=datetime.datetime.now()
+    cv2.imwrite(str(now.strftime("%y_%m_%d_%H_%M_%S")+".jpg"),lastFrame)
+    print("saved...")
+  #update previous input
+  prev_input = input
+  #slight pause to debounce
+  
+
+cv2.destroyAllWindow
