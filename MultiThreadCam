@@ -45,7 +45,7 @@ while True:
   #if the last reading was low and this one high, print
   if ((not prev_input) and input):
     print("Button pressed")
-    time.sleep(0.05)   
+    time.sleep(2)   # param as seconds
   
     now=datetime.datetime.now()
     cv2.imwrite(str(now.strftime("%y_%m_%d_%H_%M_%S")+".jpg"),lastFrame)
