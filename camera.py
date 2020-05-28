@@ -3,6 +3,8 @@ import time
 import datetime
 
 cam=cv2.VideoCapture(0)
+cam.set(3,1280)
+cam.set(4,1024)
 ret_val, img=cam.read()
 ret_val, img=cam.read()
 while(True):
