@@ -28,7 +28,10 @@ then run follwoing commands:
 ```
 $ sudo nano /usr/bin/runCamera.sh
 ```
-
+then make the file executable:
+```
+$sudo chmod +x /usr/bin/runCamera.sh
+```
 insert follwoing commands in the nano editor: 
 ```
 #!/bin/sh/
